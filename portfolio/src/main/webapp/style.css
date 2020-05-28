@@ -9,6 +9,26 @@
   margin-top: 20px;
 }
 
+#home {
+  padding-top: 60px;
+}
+
+#projects {
+  padding-top: 60px;
+}
+
+#cooking {
+  padding-top: 60px;
+}
+
+#gallery {
+  padding-top: 60px;
+}
+
+#contact {
+  padding-top: 60px;
+}
+
 #navbar {
   position: fixed;
   list-style-type: none;
@@ -21,28 +41,28 @@
 }
 
 .heading {
-    float:right;
+  float:right;
 }
 
 .heading_main {
-    float: left;
+  float: left;
 }
 
 .heading_main a {
-    display: block;
-    padding: 16px 18px;
-    text-align: center;
-    color:white;
-    text-decoration: none;    
+  display: block;
+  padding: 16px 18px;
+  text-align: center;
+  color:white;
+  text-decoration: none;    
 }
 .heading a {
-    display: block;
-    padding: 16px 18px;
-    text-align: center;
-    color:white;
-    text-decoration: none;
+  display: block;
+  padding: 16px 18px;
+  text-align: center;
+  color:white;
+  text-decoration: none;
 }
 
 .heading a:hover {
-    background-color: #5d4ead;
+  background-color: #5d4ead;
 }
