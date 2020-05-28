@@ -14,9 +14,7 @@
 
 /**
  * Displays one of my favorite foods
- */
- /*
- TODO: either remove this function or utilize it
+   TODO: either remove this function or utilize it
  */
 function addRandomFood() {
   const fav_foods =
