@@ -13,19 +13,19 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Displays one of my favorite foods
  */
-function addRandomGreeting() {
-  const greetings =
+function addRandomFood() {
+  const fav_foods =
       ['Pizza', 
       'Tacos', 
       'Sushi', 
       'Ice Cream Cake'];
 
   // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  const food =fav_foods[Math.floor(Math.random() *fav_foods.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const foodContainer = document.getElementById('food-container');
+  foodContainer.innerText = food;
 }
