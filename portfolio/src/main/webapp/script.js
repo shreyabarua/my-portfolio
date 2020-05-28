@@ -13,16 +13,20 @@
 // limitations under the License.
 
 /**
- * Adds a random greeting to the page.
+ * Displays one of my favorite foods
+ * TODO: either remove this function or utilize it
  */
-function addRandomGreeting() {
-  const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
+function addRandomFood() {
+  const fav_foods =
+      ['Pizza', 
+      'Tacos', 
+      'Sushi', 
+      'Ice Cream Cake'];
 
   // Pick a random greeting.
-  const greeting = greetings[Math.floor(Math.random() * greetings.length)];
+  const food = fav_foods[Math.floor(Math.random() * fav_foods.length)];
 
   // Add it to the page.
-  const greetingContainer = document.getElementById('greeting-container');
-  greetingContainer.innerText = greeting;
+  const foodContainer = document.getElementById('food-container');
+  foodContainer.innerText = food;
 }
