@@ -15,6 +15,9 @@
 /**
  * Displays one of my favorite foods
  */
+ /*
+ TODO: either remove this function or utilize it
+ */
 function addRandomFood() {
   const fav_foods =
       ['Pizza', 
@@ -23,7 +26,7 @@ function addRandomFood() {
       'Ice Cream Cake'];
 
   // Pick a random greeting.
-  const food =fav_foods[Math.floor(Math.random() *fav_foods.length)];
+  const food = fav_foods[Math.floor(Math.random() * fav_foods.length)];
 
   // Add it to the page.
   const foodContainer = document.getElementById('food-container');
