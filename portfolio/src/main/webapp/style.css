@@ -1,3 +1,4 @@
+
 #content {
   margin-left: auto;
   margin-right: auto;
@@ -6,4 +7,62 @@
 
 #food-container {
   margin-top: 20px;
+}
+
+#home {
+  padding-top: 60px;
+}
+
+#projects {
+  padding-top: 60px;
+}
+
+#cooking {
+  padding-top: 60px;
+}
+
+#gallery {
+  padding-top: 60px;
+}
+
+#contact {
+  padding-top: 60px;
+}
+
+#navbar {
+  position: fixed;
+  list-style-type: none;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#2d2075;    
+}
+
+.heading {
+  float:right;
+}
+
+.heading_main {
+  float: left;
+}
+
+.heading_main a {
+  display: block;
+  padding: 16px 18px;
+  text-align: center;
+  color:white;
+  text-decoration: none;    
+}
+.heading a {
+  display: block;
+  padding: 16px 18px;
+  text-align: center;
+  color:white;
+  text-decoration: none;
+}
+
+.heading a:hover {
+  background-color: #5d4ead;
 }
