@@ -103,10 +103,12 @@
   text-decoration: none;
   margin: 5px 2px;
 }
+
 .fa-instagram {
   background:white;
   color:blue;
 }
+
 .fa-instagram:hover {
   background:gainsboro;
   color:blue;
