@@ -12,21 +12,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-/**
- * Displays one of my favorite foods
- * TODO: either remove this function or utilize it
- */
-function addRandomFood() {
-  const fav_foods =
-      ['Pizza', 
-      'Tacos', 
-      'Sushi', 
-      'Ice Cream Cake'];
-
-  // Pick a random greeting.
-  const food = fav_foods[Math.floor(Math.random() * fav_foods.length)];
-
-  // Add it to the page.
-  const foodContainer = document.getElementById('food-container');
-  foodContainer.innerText = food;
-}
+/*
+* TODO: add some javascript features to portfolio here
+*/
