@@ -5,28 +5,51 @@
   width: 700px;
 }
 
+.img1 {
+  border-radius: 25px;
+  padding: 10px;
+  float: right;
+}
+
+#intro {
+  text-align: center;
+}
+.clearfix {
+  overflow: auto;
+}
+
 #food-container {
   margin-top: 20px;
 }
 
 #home {
+  text-align: center;
   padding-top: 60px;
+  color: #2d2075;
 }
 
 #projects {
   padding-top: 60px;
+  text-align: center;
+  color: #2d2075;
 }
 
 #cooking {
   padding-top: 60px;
+  text-align: center;
+  color: #2d2075;
 }
 
 #gallery {
   padding-top: 60px;
+  text-align: center;
+  color: #2d2075;
 }
 
 #contact {
   padding-top: 60px;
+  text-align: center;
+  color: #2d2075;
 }
 
 #navbar {
