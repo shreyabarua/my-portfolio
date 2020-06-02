@@ -45,6 +45,9 @@ function getMessage() {
     });
 }
 
+/*
+unused/untested function. (for practice/reference)
+*/
 async function getMsgUsingAsyncAwait() {
   const response = await fetch('/data');
   const msg = await response.text();
