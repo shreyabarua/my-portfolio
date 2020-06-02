@@ -53,3 +53,21 @@ async function getMsgUsingAsyncAwait() {
   const msg = await response.text();
   document.getElementById('msg-container').innerText = msg;
 }
+
+/**
+ * Fetches stats from the servers and adds them to the DOM.
+ */
+function getMessages() {
+  fetch('/data').then(response => response.json()).then((messages) => {
+    // messages is an arraylist object, not a string, so we have to
+    // reference its indexes to create HTML content
+
+    const msgListElement = document.getElementById('msg-container');
+    msgListElement.innerHTML = '';
+    statsListElement.appendChild(
+        createListElement('Message 1: ' + messages[0]));
+    statsListElement.appendChild(
+        createListElement('Message 2: ' + messages[1]));
+    statsListElement.appendChild('Message 3: ' + messages[2]);
+  });
+}
