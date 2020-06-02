@@ -13,7 +13,8 @@
 // limitations under the License.
 
 package com.google.sps.servlets;
-
+import java.util.ArrayList;
+import java.util.List;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,10 +24,10 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
-    private ArrayList<String>messages;
+    private ArrayList<String> messages;
     @Override
     public void init() {
-        messages = new ArrayList<>();
+        messages = new ArrayList<String>();
         messages.add("hello");
         messages.add("hi");
         messages.add("howdy");
@@ -43,9 +44,10 @@ public class DataServlet extends HttpServlet {
   private String convertToJson(ArrayList<String> arr) {
       int i;
       String json = "{";
-      for (i = 0; i < arr.size(); i++) {
-          json += "\"message" + i + "\":" + arr[i];
+      for (i = 0; i < arr.size()-1; i++) {
+          json += "\"message" + i + "\": \"" + arr.get(i) + "\", ";
       }
+      json += "\"message" + i + "\": \"" + arr.get(i) + "\"";
       json += "}";
       return json;
   }
