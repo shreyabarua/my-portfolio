@@ -30,15 +30,6 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
-/**
- * Fetches a message from the server and adds it to the page.
- 
-function getMessage() {
-    fetch('/data').then(response => response.text()).then((message) => {
-        document.getElementById('msg-container').innerText = message;
-    });
-}
-
 /*
 unused/untested function. (for practice/reference)
 */
@@ -47,7 +38,6 @@ async function getMsgUsingAsyncAwait() {
   const msg = await response.text();
   document.getElementById('msg-container').innerText = msg;
 }
-*/
 
 /**
  * Fetches messages from the servers and adds them to the DOM.
