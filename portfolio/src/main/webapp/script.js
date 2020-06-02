@@ -30,15 +30,9 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
-function getRandomQuoteUsingArrowFunctions() {
-  fetch('/random-quote').then(response => response.text()).then((quote) => {
-    document.getElementById('quote-container').innerText = quote;
-  });
-}
-
 /**
  * Fetches a message from the server and adds it to the page.
- */
+ 
 function getMessage() {
     fetch('/data').then(response => response.text()).then((message) => {
         document.getElementById('msg-container').innerText = message;
@@ -53,21 +47,29 @@ async function getMsgUsingAsyncAwait() {
   const msg = await response.text();
   document.getElementById('msg-container').innerText = msg;
 }
+*/
 
 /**
- * Fetches stats from the servers and adds them to the DOM.
+ * Fetches messages from the servers and adds them to the DOM.
  */
 function getMessages() {
   fetch('/data').then(response => response.json()).then((messages) => {
     // messages is an arraylist object, not a string, so we have to
     // reference its indexes to create HTML content
-
-    const msgListElement = document.getElementById('msg-container');
-    msgListElement.innerHTML = '';
-    statsListElement.appendChild(
+    const messageListElement = document.getElementById('msg-container');
+    messageListElement.innerHTML = '';
+    messageListElement.appendChild(
         createListElement('Message 1: ' + messages[0]));
-    statsListElement.appendChild(
+    messageListElement.appendChild(
         createListElement('Message 2: ' + messages[1]));
-    statsListElement.appendChild('Message 3: ' + messages[2]);
+    messageListElement.appendChild(
+        createListElement('Message 3: ' + messages[2]));
   });
+}
+
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }

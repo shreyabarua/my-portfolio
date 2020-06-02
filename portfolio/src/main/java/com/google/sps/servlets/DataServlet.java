@@ -43,12 +43,12 @@ public class DataServlet extends HttpServlet {
 
   private String convertToJson(ArrayList<String> arr) {
       int i;
-      String json = "{";
+      String json = "[";
       for (i = 0; i < arr.size()-1; i++) {
-          json += "\"message" + i + "\": \"" + arr.get(i) + "\", ";
+          json += "\""+ arr.get(i) + "\", ";
       }
-      json += "\"message" + i + "\": \"" + arr.get(i) + "\"";
-      json += "}";
+      json +=  "\"" + arr.get(i) + "\"";
+      json += "]";
       return json;
   }
 }
