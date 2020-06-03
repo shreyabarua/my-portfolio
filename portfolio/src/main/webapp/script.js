@@ -42,10 +42,9 @@ function getMessages() {
     else {
         console.log("printing messages");
         messageListElement.innerHTML = '';
-        var x;
-        for (x = 0; x < messages.length; x++) {
+        for (let x in messages) {
             messageListElement.appendChild(
-            createListElement('Message '+ (x+1) + ': ' + messages[x]));
+            createListElement('Message '+ x + ': ' + messages[x]));
         }
     }
   });
