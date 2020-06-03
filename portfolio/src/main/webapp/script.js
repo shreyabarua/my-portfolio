@@ -38,13 +38,13 @@ function getMessages() {
     // messages is an array, not a string, so we have to
     // reference its indexes to create HTML content
     const messageListElement = document.getElementById('msg-container');
-    if (messages.length == 0) messageListElement.innerHTML = 'no messages';
+    if (messages.length == 0) messageListElement.innerHTML = 'no comments so far';
     else {
         console.log("printing messages");
         messageListElement.innerHTML = '';
         for (let x in messages) {
             messageListElement.appendChild(
-            createListElement('Message '+ x + ': ' + messages[x]));
+            createListElement(messages[x]));
         }
     }
   });
