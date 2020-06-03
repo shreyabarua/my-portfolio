@@ -25,6 +25,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
     private ArrayList<String> messages;
+
     @Override
     public void init() {
         messages = new ArrayList<String>();
@@ -42,6 +43,7 @@ public class DataServlet extends HttpServlet {
   }
 
   private String convertToJson(ArrayList<String> arr) {
+      if (arr.size() == 0) return "[]";
       int i;
       String json = "[";
       for (i = 0; i < arr.size()-1; i++) {

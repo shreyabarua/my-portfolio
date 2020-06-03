@@ -30,30 +30,24 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
-/*
-unused/untested function. (for practice/reference)
-*/
-async function getMsgUsingAsyncAwait() {
-  const response = await fetch('/data');
-  const msg = await response.text();
-  document.getElementById('msg-container').innerText = msg;
-}
-
 /**
  * Fetches messages from the servers and adds them to the DOM.
  */
 function getMessages() {
   fetch('/data').then(response => response.json()).then((messages) => {
-    // messages is an arraylist object, not a string, so we have to
+    // messages is an array, not a string, so we have to
     // reference its indexes to create HTML content
     const messageListElement = document.getElementById('msg-container');
-    messageListElement.innerHTML = '';
-    messageListElement.appendChild(
-        createListElement('Message 1: ' + messages[0]));
-    messageListElement.appendChild(
-        createListElement('Message 2: ' + messages[1]));
-    messageListElement.appendChild(
-        createListElement('Message 3: ' + messages[2]));
+    if (messages.length == 0) messageListElement.innerHTML = 'no messages';
+    else {
+        console.log("printing messages");
+        messageListElement.innerHTML = '';
+        var x;
+        for (x = 0; x < messages.length; x++) {
+            messageListElement.appendChild(
+            createListElement('Message '+ (x+1) + ': ' + messages[x]));
+        }
+    }
   });
 }
 
