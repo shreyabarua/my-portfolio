@@ -13,7 +13,8 @@
 // limitations under the License.
 
 package com.google.sps.servlets;
-
+import java.util.ArrayList;
+import java.util.List;
 import java.io.IOException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -23,11 +24,33 @@ import javax.servlet.http.HttpServletResponse;
 /** Servlet that returns some example content. TODO: modify this file to handle comments data */
 @WebServlet("/data")
 public class DataServlet extends HttpServlet {
+    private ArrayList<String> messages;
+
+    @Override
+    public void init() {
+        messages = new ArrayList<String>();
+        messages.add("hello");
+        messages.add("hi");
+        messages.add("howdy");
+    }
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    String message = "Hello Shreya!";
-    response.setContentType("text/html;");
-    response.getWriter().println(message);
+    String json =  convertToJson(messages);
+    //send the JSON as the response
+    response.setContentType("application/json;");
+    response.getWriter().println(json);
+  }
+
+  private String convertToJson(ArrayList<String> arr) {
+      if (arr.size() == 0) return "[]";
+      int i;
+      String json = "[";
+      for (i = 0; i < arr.size()-1; i++) {
+          json += "\""+ arr.get(i) + "\", ";
+      }
+      json +=  "\"" + arr.get(i) + "\"";
+      json += "]";
+      return json;
   }
 }

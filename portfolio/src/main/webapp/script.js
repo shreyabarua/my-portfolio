@@ -30,26 +30,29 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
 }
 
-function getRandomQuoteUsingArrowFunctions() {
-  fetch('/random-quote').then(response => response.text()).then((quote) => {
-    document.getElementById('quote-container').innerText = quote;
+/**
+ * Fetches messages from the servers and adds them to the DOM.
+ */
+function getMessages() {
+  fetch('/data').then(response => response.json()).then((messages) => {
+    // messages is an array, not a string, so we have to
+    // reference its indexes to create HTML content
+    const messageListElement = document.getElementById('msg-container');
+    if (messages.length == 0) messageListElement.innerHTML = 'no messages';
+    else {
+        console.log("printing messages");
+        messageListElement.innerHTML = '';
+        for (let x in messages) {
+            messageListElement.appendChild(
+            createListElement('Message '+ x + ': ' + messages[x]));
+        }
+    }
   });
 }
 
-/**
- * Fetches a message from the server and adds it to the page.
- */
-function getMessage() {
-    fetch('/data').then(response => response.text()).then((message) => {
-        document.getElementById('msg-container').innerText = message;
-    });
-}
-
-/*
-unused/untested function. (for practice/reference)
-*/
-async function getMsgUsingAsyncAwait() {
-  const response = await fetch('/data');
-  const msg = await response.text();
-  document.getElementById('msg-container').innerText = msg;
+/** Creates an <li> element containing text. */
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
 }
