@@ -37,11 +37,12 @@ public class DataServlet extends HttpServlet {
     DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
     PreparedQuery results = datastore.prepare(query);
     ArrayList<String> messages = new ArrayList<String>();
+       
     for (Entity entity : results.asIterable()) {
         String text = (String) entity.getProperty("comment_body");
         messages.add(text);
     }
-
+    
     String json =  convertToJson(messages);
     //send the JSON as the response
     response.setContentType("application/json;");

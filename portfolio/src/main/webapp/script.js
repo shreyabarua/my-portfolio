@@ -45,7 +45,7 @@ function getMessages() {
         for (let x in messages) {
             messageListElement.appendChild(
             createListElement(messages[x]));
-        }
+        }      
     }
   });
 }
