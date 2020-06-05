@@ -136,12 +136,12 @@
 }
 
 .fa-instagram {
-  background: gainsboro;
+  background:#dce0e3;
   color:blue;
 }
 
 .fa-instagram:hover {
-  background:grey;
+  background:#c2c8cc;
   color:blue;
 }
 
@@ -151,8 +151,9 @@ img {
 
 /* Position the image container (needed to position the left and right arrows) */
 .slideshow {
-  max-width: 350px;
-  max-height: 250px;
+    margin: auto;
+  max-width: 450px;
+  max-height: 350px;
   position: relative;
 }
 
@@ -160,8 +161,8 @@ img {
   width:100%;
 }
 .mySlides {
-  max-width: 350px;
-  max-height: 250px;
+  max-width: 450px;
+  max-height: 350px;
   object-fit: cover;
   display: none;
 }
