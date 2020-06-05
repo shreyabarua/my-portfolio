@@ -1,6 +1,8 @@
 
 #content {
   margin-left: auto;
+  line-height: 1.6;
+  font-family: sans-serif;
   margin-right: auto;
   width: 700px;
 }
@@ -23,6 +25,7 @@
 }
 
 #home {
+  font-family: serif;
   text-align: center;
   padding-top: 60px;
   color: #2d2075;
@@ -30,29 +33,34 @@
 
 #projects {
   padding-top: 60px;
+  font-family: serif;
   text-align: center;
   color: #2d2075;
 }
 
 #cooking {
   padding-top: 60px;
+  font-family: serif;
   text-align: center;
   color: #2d2075;
 }
 
 #gallery {
   padding-top: 60px;
+  font-family: serif;
   text-align: center;
   color: #2d2075;
 }
 
 #contact {
   padding-top: 60px;
+  font-family: serif;
   text-align: center;
   color: #2d2075;
 }
 
 #navbar {
+  z-index: 9999;
   position: fixed;
   list-style-type: none;
   top: 0;
@@ -128,12 +136,12 @@
 }
 
 .fa-instagram {
-  background:white;
+  background: gainsboro;
   color:blue;
 }
 
 .fa-instagram:hover {
-  background:gainsboro;
+  background:grey;
   color:blue;
 }
 
