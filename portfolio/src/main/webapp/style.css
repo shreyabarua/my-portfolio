@@ -124,7 +124,31 @@
   padding: 0 4px;
 }
 
-.fa {
+.fa-google {
+  margin-right:5px;
+  width: 25px;
+  float:left;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  margin-right:5px;
+  width: 25px;
+  float:left;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
   padding: 20px;
   font-size: 18px;
   border-radius: 25px;
@@ -133,9 +157,6 @@
   text-align: left;
   text-decoration: none;
   margin: 5px 2px;
-}
-
-.fa-instagram {
   background:#dce0e3;
   color:blue;
 }
