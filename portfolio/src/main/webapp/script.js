@@ -59,7 +59,5 @@ function createListElement(text) {
 
 /** Tells the server to delete all comments */
 function deleteComments() {
- console.log("deleteComments() function reached");
- 
-  fetch('/delete-data', {method: 'POST'}).then(getMessages());
+  fetch('/delete-data', {method: 'POST'}).then(fetch('/data', {method: 'GET'})).then(getMessages());
 }
