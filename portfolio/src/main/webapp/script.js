@@ -56,3 +56,8 @@ function createListElement(text) {
   liElement.innerText = text;
   return liElement;
 }
+
+/** Tells the server to delete all comments */
+function deleteComments() {
+  fetch('/delete-data', {method: 'POST'}).then(fetch('/data', {method: 'GET'})).then(getMessages());
+}
