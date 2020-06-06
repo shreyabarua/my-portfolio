@@ -172,7 +172,7 @@ img {
 
 /* Position the image container (needed to position the left and right arrows) */
 .slideshow {
-    margin: auto;
+  margin: auto;
   max-width: 450px;
   max-height: 350px;
   position: relative;
