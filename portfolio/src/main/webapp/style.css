@@ -1,6 +1,8 @@
 
 #content {
   margin-left: auto;
+  line-height: 1.6;
+  font-family: sans-serif;
   margin-right: auto;
   width: 700px;
 }
@@ -14,6 +16,7 @@
 #intro {
   text-align: center;
 }
+
 .clearfix {
   overflow: auto;
 }
@@ -23,6 +26,7 @@
 }
 
 #home {
+  font-family: serif;
   text-align: center;
   padding-top: 60px;
   color: #2d2075;
@@ -30,29 +34,34 @@
 
 #projects {
   padding-top: 60px;
+  font-family: serif;
   text-align: center;
   color: #2d2075;
 }
 
 #cooking {
   padding-top: 60px;
+  font-family: serif;
   text-align: center;
   color: #2d2075;
 }
 
 #gallery {
   padding-top: 60px;
+  font-family: serif;
   text-align: center;
   color: #2d2075;
 }
 
 #contact {
   padding-top: 60px;
+  font-family: serif;
   text-align: center;
   color: #2d2075;
 }
 
 #navbar {
+  z-index: 9999;
   position: fixed;
   list-style-type: none;
   top: 0;
@@ -60,7 +69,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:#2d2075;    
+  background-color: #2d2075;    
 }
 
 .heading {
@@ -75,7 +84,7 @@
   display: block;
   padding: 16px 18px;
   text-align: center;
-  color:white;
+  color: white;
   text-decoration: none;    
 }
 .heading a {
@@ -116,7 +125,31 @@
   padding: 0 4px;
 }
 
-.fa {
+.fa-google {
+  margin-right:5px;
+  width: 25px;
+  float:left;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  background: #dd4b39;
+  color: white;
+}
+
+.fa-linkedin {
+  margin-right:5px;
+  width: 25px;
+  float:left;
+  padding: 10px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
   padding: 20px;
   font-size: 18px;
   border-radius: 25px;
@@ -125,16 +158,13 @@
   text-align: left;
   text-decoration: none;
   margin: 5px 2px;
-}
-
-.fa-instagram {
-  background:white;
-  color:blue;
+  background: #dce0e3;
+  color: blue;
 }
 
 .fa-instagram:hover {
-  background:gainsboro;
-  color:blue;
+  background: #c2c8cc;
+  color: blue;
 }
 
 img {
@@ -143,17 +173,18 @@ img {
 
 /* Position the image container (needed to position the left and right arrows) */
 .slideshow {
-  max-width: 350px;
-  max-height: 250px;
+  margin: auto;
+  max-width: 450px;
+  max-height: 350px;
   position: relative;
 }
 
-.slide {
+.slide-image {
   width:100%;
 }
-.mySlides {
-  max-width: 350px;
-  max-height: 250px;
+.slide-container {
+  max-width: 450px;
+  max-height: 350px;
   object-fit: cover;
   display: none;
 }
