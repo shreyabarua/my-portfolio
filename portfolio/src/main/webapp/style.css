@@ -16,6 +16,7 @@
 #intro {
   text-align: center;
 }
+
 .clearfix {
   overflow: auto;
 }
@@ -68,7 +69,7 @@
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color:#2d2075;    
+  background-color: #2d2075;    
 }
 
 .heading {
@@ -83,7 +84,7 @@
   display: block;
   padding: 16px 18px;
   text-align: center;
-  color:white;
+  color: white;
   text-decoration: none;    
 }
 .heading a {
@@ -157,13 +158,13 @@
   text-align: left;
   text-decoration: none;
   margin: 5px 2px;
-  background:#dce0e3;
-  color:blue;
+  background: #dce0e3;
+  color: blue;
 }
 
 .fa-instagram:hover {
-  background:#c2c8cc;
-  color:blue;
+  background: #c2c8cc;
+  color: blue;
 }
 
 img {
@@ -178,10 +179,10 @@ img {
   position: relative;
 }
 
-.slide {
+.slide-image {
   width:100%;
 }
-.mySlides {
+.slide-container {
   max-width: 450px;
   max-height: 350px;
   object-fit: cover;
