@@ -221,3 +221,7 @@ img {
 #msg-container {
     margin-top: 20px;
 }
+
+#comments-form {
+    display: none;
+}

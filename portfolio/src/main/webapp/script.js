@@ -61,3 +61,13 @@ function createListElement(text) {
 function deleteComments() {
   fetch('/delete-data', {method: 'POST'}).then(fetch('/data', {method: 'GET'})).then(getMessages());
 }
+
+function displayComments() {
+    console.log("hi");
+    fetch('/login').then(response => response.json()).then((login) => {
+        if (login.status) {
+            document.getElementById("comments-form").style.display = 'block';
+        }
+    });
+    
+}
