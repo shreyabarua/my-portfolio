@@ -63,10 +63,13 @@ function deleteComments() {
 }
 
 function displayComments() {
-    console.log("hi");
     fetch('/login').then(response => response.json()).then((login) => {
         if (login.status) {
             document.getElementById("comments-form").style.display = 'block';
+        }
+        else {
+            const loginLinkElement = document.getElementById('login-link-container');
+            loginLinkElement.innerHTML="<p>Login <a href=\"" + login.login_url + "\">here</a> to leave a comment.</p>";            
         }
     });
     
