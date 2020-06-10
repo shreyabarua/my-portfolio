@@ -61,3 +61,20 @@ function createListElement(text) {
 function deleteComments() {
   fetch('/delete-data', {method: 'POST'}).then(fetch('/data', {method: 'GET'})).then(getMessages());
 }
+
+function displayComments() {
+    fetch('/login').then(response => response.json()).then((login) => {
+        if (login.status) {
+            document.getElementById("comments-form").style.display = 'block';
+        }
+        else {
+            const loginLinkElement = document.getElementById('login-link-container');
+            loginLinkElement.innerHTML="Log in <a href=\"" + login.login_url + "\">here</a> to leave a comment.";            
+        }
+    });
+}
+
+function onLoad() {
+    getMessages();
+    displayComments();
+}

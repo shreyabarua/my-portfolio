@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="script.js"></script>
   </head>
-  <body onload="getMessages()">
+  <body onload="onLoad()">
     <ul id = "navbar">
 
     <li class = "heading"><a href="#contact">CONTACT</a></li>
@@ -166,17 +166,20 @@
         </div>
     
     <h2 id = "comments" > Comments </h2>
-    <form action="/data" method="POST">
+    <div id = "comments-form">
+        <form action="/data" method="POST">
 
-      <p>Leave a comment:</p>
-      <textarea placeholder="Write something..." name="text-input" rows="4" cols="50"></textarea>
-      <br/><br/>
-    <input type="submit" />
-    </form>
-    
-    <p>Comments:</p>
-    <ul id="msg-container"></ul>
-    <button onclick="deleteComments()">delete comments</button>
+        <p>Leave a comment:</p>
+        <textarea placeholder="Write something..." name="text-input" rows="4" cols="50"></textarea>
+        <br/><br/>
+        <input type="submit" />
+        </form>
+        
+        <p>Comments:</p>
+        <ul id="msg-container"></ul>
+        <button onclick="deleteComments()">delete comments</button>
+    </div>
+    <p id="login-link-container"></p>
 
     </div>
     
