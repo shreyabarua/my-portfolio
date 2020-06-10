@@ -69,8 +69,12 @@ function displayComments() {
         }
         else {
             const loginLinkElement = document.getElementById('login-link-container');
-            loginLinkElement.innerHTML="<p>Login <a href=\"" + login.login_url + "\">here</a> to leave a comment.</p>";            
+            loginLinkElement.innerHTML="Log in <a href=\"" + login.login_url + "\">here</a> to leave a comment.";            
         }
     });
-    
+}
+
+function onLoad() {
+    getMessages();
+    displayComments();
 }
