@@ -53,8 +53,11 @@ function getMessages() {
 
 /** Creates an <li> element containing text. */
 function createListElement(text) {
+  var colon = text.indexOf(":");
+  var email = text.substring(0, colon);
+  var body= text.substring(colon, text.length);
   const liElement = document.createElement('li');
-  liElement.innerText = text;
+  liElement.innerHTML = "<i>"+email + "</i>" + body;
   return liElement;
 }
 
