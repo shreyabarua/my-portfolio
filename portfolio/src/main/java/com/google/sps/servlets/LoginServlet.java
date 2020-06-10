@@ -30,22 +30,22 @@ public class LoginServlet extends HttpServlet {
     
     UserService userService = UserServiceFactory.getUserService();
     boolean status = userService.isUserLoggedIn();
-    String json_login;
+    String jsonLogin;
     String urlToRedirectToAfterUserLogsIn = "/index.html";
     String loginUrl = userService.createLoginURL(urlToRedirectToAfterUserLogsIn);
     String urlToRedirectToAfterUserLogsOut = "/index.html";
     String logoutUrl = userService.createLogoutURL(urlToRedirectToAfterUserLogsOut);
 
     if (userService.isUserLoggedIn()) {
-        json_login = "{\"status\": true, ";
+        jsonLogin = "{\"status\": true, ";
 
     } else {
-        json_login = "{\"status\": false, ";
+        jsonLogin = "{\"status\": false, ";
     }
-    json_login += "\"login_url\": \"" + loginUrl + "\", ";
-    json_login += "\"logout_url\": \"" + logoutUrl + "\"}";
+    jsonLogin += "\"login_url\": \"" + loginUrl + "\", ";
+    jsonLogin += "\"logout_url\": \"" + logoutUrl + "\"}";
     //send the json as the response
     response.setContentType("application/json;");
-    response.getWriter().println(json_login);
+    response.getWriter().println(jsonLogin);
   }
 }
