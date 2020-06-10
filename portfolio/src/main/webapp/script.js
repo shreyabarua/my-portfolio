@@ -66,6 +66,9 @@ function displayComments() {
     fetch('/login').then(response => response.json()).then((login) => {
         if (login.status) {
             document.getElementById("comments-form").style.display = 'block';
+            const loginLinkElement = document.getElementById('logout-link-container');
+            loginLinkElement.innerHTML="<p>Log out <a href=\"" + login.logout_url + "\">here</a>.</p>";            
+
         }
         else {
             const loginLinkElement = document.getElementById('login-link-container');

@@ -19,6 +19,8 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.PreparedQuery;
 import com.google.appengine.api.datastore.Query;
 import com.google.appengine.api.datastore.Query.SortDirection;
+import com.google.appengine.api.users.UserService;
+import com.google.appengine.api.users.UserServiceFactory;
 import java.util.ArrayList;
 import java.util.List;
 import java.io.IOException;
@@ -39,7 +41,9 @@ public class DataServlet extends HttpServlet {
     ArrayList<String> messages = new ArrayList<String>();
     for (Entity entity : results.asIterable()) {
         String text = (String) entity.getProperty("comment_body");
-        messages.add(text);
+        String email = (String) entity.getProperty("email");
+        String result = email + ": " + text;
+        messages.add(result);
     }
 
     String json =  convertToJson(messages);
@@ -52,9 +56,12 @@ public class DataServlet extends HttpServlet {
   public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
     // Get the input from the form.
     String text = getParameter(request, "text-input", "");
+    UserService userService = UserServiceFactory.getUserService();
+    String email = userService.getCurrentUser().getEmail();
     long timestampMillis = System.currentTimeMillis();
 
     Entity commentEntity = new Entity("Comment");
+    commentEntity.setProperty("email",email);
     commentEntity.setProperty("comment_body", text);
     commentEntity.setProperty("timestamp", timestampMillis);
 
