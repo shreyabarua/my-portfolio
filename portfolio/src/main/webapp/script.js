@@ -45,6 +45,7 @@ function getMessages() {
         for (let x in messages) {
             messageListElement.appendChild(
             createListElement(messages[x]));
+            messageListElement.appendChild(document.createElement('hr'));
         }
     }
   });
@@ -67,7 +68,7 @@ function displayComments() {
         if (login.status) {
             document.getElementById("comments-form").style.display = 'block';
             const loginLinkElement = document.getElementById('logout-link-container');
-            loginLinkElement.innerHTML="<p>Log out <a href=\"" + login.logout_url + "\">here</a>.</p>";            
+            loginLinkElement.innerHTML="Log out <a href=\"" + login.logout_url + "\">here</a>.";            
 
         }
         else {
