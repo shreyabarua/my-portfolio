@@ -220,6 +220,7 @@ img {
 
 #msg-container {
     margin-top: 20px;
+    list-style-type: none;
 }
 
 #comments-form {
