@@ -5,9 +5,12 @@
     <title>Shreya Barua Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLHfUk3nIfB_Jmx_i8BId4Le26FGhkRHw"></script>
     <script src="script.js"></script>
   </head>
-  <body onload="onLoad()">
+
+  <body onload="onLoad(); createMap();">
+
     <ul id = "navbar">
 
     <li class = "heading"><a href="#contact">CONTACT</a></li>
@@ -110,6 +113,7 @@
         </div>
         </div>
         <a target = "_blank" href="https://www.instagram.com/cooking_at_quarantine/" class="fa fa-instagram"> : @cooking_at_quarantine</a>
+        <div id="map"></div>
 
       <h2 id = "gallery" > Gallery </h2>    
         <div class = "slideshow">
