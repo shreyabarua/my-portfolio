@@ -81,11 +81,6 @@ function displayComments() {
     });
 }
 
-function onLoad() {
-    getMessages();
-    displayComments();
-}
-
 function createMap() {
   const map = new google.maps.Map(
       document.getElementById('map'),
@@ -138,4 +133,10 @@ function createMap() {
     map: map,
     title: 'Voodoo Doughnut'
   });
+}
+
+function onLoad() {
+    getMessages();
+    displayComments();
+    createMap();
 }
