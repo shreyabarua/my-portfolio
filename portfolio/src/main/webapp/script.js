@@ -16,54 +16,54 @@ var slideIndex = 1;
 showSlides(slideIndex);
 
 function plusSlides(n) {
-  showSlides(slideIndex += n);
+    showSlides(slideIndex += n);
 }
 
 function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("slide-container");
-  if (n > slides.length) slideIndex = 1
-  if (n < 1) slideIndex = slides.length
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  slides[slideIndex-1].style.display = "block";
+    var i;
+    var slides = document.getElementsByClassName("slide-container");
+    if (n > slides.length) slideIndex = 1
+    if (n < 1) slideIndex = slides.length
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
 }
 
 /**
  * Fetches messages from the servers and adds them to the DOM.
  */
 function getMessages() {
-  fetch('/data').then(response => response.json()).then((messages) => {
-    // messages is an array, not a string, so we have to
-    // reference its indexes to create HTML content
-    const messageListElement = document.getElementById('msg-container');
-    if (messages.length == 0) messageListElement.innerHTML = 'no comments so far';
-    else {
-        console.log("printing messages");
-        messageListElement.innerHTML = '';
-        for (let x in messages) {
-            messageListElement.appendChild(
-            createListElement(messages[x]));
-            messageListElement.appendChild(document.createElement('hr'));
+    fetch('/data').then(response => response.json()).then((messages) => {
+        // messages is an array, not a string, so we have to
+        // reference its indexes to create HTML content
+        const messageListElement = document.getElementById('msg-container');
+        if (messages.length == 0) messageListElement.innerHTML = 'no comments so far';
+        else {
+            console.log("printing messages");
+            messageListElement.innerHTML = '';
+            for (let x in messages) {
+                messageListElement.appendChild(
+                    createListElement(messages[x]));
+                messageListElement.appendChild(document.createElement('hr'));
+            }
         }
-    }
-  });
+    });
 }
 
 /** Creates an <li> element containing text. */
 function createListElement(text) {
-  var colon = text.indexOf(":");
-  var email = text.substring(0, colon);
-  var body= text.substring(colon, text.length);
-  const liElement = document.createElement('li');
-  liElement.innerHTML = "<i>"+email + "</i>" + body;
-  return liElement;
+    var colon = text.indexOf(":");
+    var email = text.substring(0, colon);
+    var body = text.substring(colon, text.length);
+    const liElement = document.createElement('li');
+    liElement.innerHTML = "<i>" + email + "</i>" + body;
+    return liElement;
 }
 
 /** Tells the server to delete all comments */
 function deleteComments() {
-  fetch('/delete-data', {method: 'POST'}).then(fetch('/data', {method: 'GET'})).then(getMessages());
+    fetch('/delete-data', { method: 'POST' }).then(fetch('/data', { method: 'GET' })).then(getMessages());
 }
 
 function displayComments() {
@@ -71,12 +71,12 @@ function displayComments() {
         if (login.status) {
             document.getElementById("comments-form").style.display = 'block';
             const loginLinkElement = document.getElementById('logout-link-container');
-            loginLinkElement.innerHTML="Log out <a href=\"" + login.logout_url + "\">here</a>.";            
+            loginLinkElement.innerHTML = "Log out <a href=\"" + login.logout_url + "\">here</a>.";
 
         }
         else {
             const loginLinkElement = document.getElementById('login-link-container');
-            loginLinkElement.innerHTML="Log in <a href=\"" + login.login_url + "\">here</a> to leave a comment.";            
+            loginLinkElement.innerHTML = "Log in <a href=\"" + login.login_url + "\">here</a> to leave a comment.";
         }
     });
 }

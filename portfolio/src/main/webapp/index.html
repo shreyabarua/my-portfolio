@@ -1,192 +1,202 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Shreya Barua Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="script.js"></script>
-  </head>
-  <body onload="onLoad()">
-    <ul id = "navbar">
 
-    <li class = "heading"><a href="#contact">CONTACT</a></li>
-    <li class = "heading"><a href="#gallery">GALLERY</a></li>
-    <li class = "heading"><a href="#cooking">COOKING</a></li>
-    <li class = "heading"><a href="#projects">PROJECTS</a></li>
-    <li class = "heading_main"><a href="#home">SHREYA BARUA</a></li>
+<head>
+	<meta charset="UTF-8">
+	<title>Shreya Barua Portfolio</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="script.js"></script>
+</head>
 
-    </ul>
-    <div id="content">
-      <h2 id = "home" >About Me</h2>
-      <div class="clearfix">
-        <img class="img1" src="/images/shreya_prof.jpg" alt="Here's a picture of me" width="190" height=auto>
-        <p id = "intro">  Hi, I'm Shreya! I'm a current computer science major at Rensselaer Polytechnic Institue
-          in Troy, New York. This summer I'm interning at Google as part of the 
-          <a href="https://buildyourfuture.withgoogle.com/programs/step/" target = "_blank">STEP</a> 
-          program. This portfolio website is one of the first projects I'll
-          be working on this summer. Aside from coding, I enjoy cooking, baking, and listening
-          to music. When I'm not self isolating during quarantine, I also like hanging out with my friends
-          and trying out new places to eat. Hope you enjoy finding a little glimpse into my life
-          through this website :) </p>
-        </div>
+<body onload="onLoad()">
+	<ul id="navbar">
 
-      <h2 id = "projects"> Projects & Contributions </h2>
-      <h3> Automatcher </h3>
-      <h5> May 2019 - August 2019 </h5>
-      <img src="/images/cplusplus.png" alt="c++ libraries logo" width="150" height="75">
-      <p><i> What is Automatcher?</i></p>
-      <p> As an intern on Google's C++ Libraries team, my podmate and I
-          worked on a tool called 
-          <a href = "https://docs.google.com/presentation/d/1aE6I6ZWN_BtyMYhmrPpYq-xEJz8Xrka_4Fj0mS_dqOk/edit#slide=id.p" target = "_blank">Automatcher</a>
-          . Automatcher is an AST matcher tool which
-          generates clang queries from user-provided code snippets. Usually complex queries
-          need to be written out by hand, but Automatcher automates this process. </p>
-      <i> What I did: </i>
-      <ul>
-      <li> Took ownership of the "hint" based approach to solving the problem of generating 
-          an Abstract Syntax Tree (AST) matcher from a user-friendly specification. </li>
-      <li>Implemented support for three different methods of annotating code fragments to guide generation of 
-          the AST matcher using C++. </li>
-      <li>Led the design and implementation of the first version of 
-          the essential data structure for representing "choice" in a code description.</li>
-      </ul>
-    <hr>
-      <h3> Submitty </h3>
-      <h5> September 2019 - December 2019 </h5>
-      <img src="/images/submitty.png" alt="submitty logo" width="150" height="75">
-      <p><i> What is Submitty? </i><p>
-      <p> <a href = "https://submitty.org/" target="_blank">Submitty</a> 
-          is an open source management, assignment submission, exam and
-           grading system from the Rensselaer Center for Open Source Software (RCOS), 
-           Department of Computer Science at Rensselaer Polytechnic Institute. </p>
-      <i> What I did: </i>
-      <p>Made open source contributions of fixing bugs and adding new features to the submission
-          server.</p>
-    <hr>
-      <h3> The Geo Effect </h3>
-      <h5> June 2017 - August 2017 </h5>
-      <img src="/images/gwc.png" alt="gwc logo" width="150" height="75">
-      <p><i> What is The Geo Effect? </i></p>
-      <p>The Geo Effect is a climate change awareness website I worked on as part of
-          the <a href="https://girlswhocode.com/" target = "_blank">Girls Who Code</a> Summer Immersion Program. </p>
-      <i>What I did:</i>
-      <p> Contributed to the backend of the website in implementing a blog for users to 
-          share their views on climate change.</p>
-    <hr>
-      <p> You can check out more of my work on 
-          <a href = "https://github.com/shreyabarua" target = "_blank">GitHub</a>.</p>
+		<li class="heading"><a href="#contact">CONTACT</a></li>
+		<li class="heading"><a href="#gallery">GALLERY</a></li>
+		<li class="heading"><a href="#cooking">COOKING</a></li>
+		<li class="heading"><a href="#projects">PROJECTS</a></li>
+		<li class="heading_main"><a href="#home">SHREYA BARUA</a></li>
 
-      <h2 id = "cooking" > Cooking </h2>
-		<p>During quarantine I've spent a lot of time in my kitchen cooking and baking.
-			Below are pictures of some of my creations. Click on any picture to be linked
-			to the recipe I followed!
-		</p>
-        <div class="row"> 
-        <div class="column">
-			<a target="_blank" href="https://www.allrecipes.com/recipe/18465/gnocchi-i/">
-				<img src="/images/gnocchi.jpg" alt="Gnocchi"> </a>
-			<a target="_blank" href="https://downshiftology.com/recipes/falafel/">
-				<img src="/images/falafel.jpg" alt="Falafel"> </a>
-			<a target="_blank" href="https://gimmedelicious.com/easy-avocado-egg-rolls-2/">
-				<img src="/images/avocadorolls.jpg" alt="Avocado Egg Rolls"> </a>   
-        </div>
-        <div class="column">
-			<a target="_blank" href="https://www.chelseasmessyapron.com/fruity-pebble-rice-krispie-treats/">
-				<img src="/images/fruitypebble.jpg" alt="Fruity Pebble Rice Krispies"> </a>
-			<a target="_blank" href="https://tasty.co/recipe/carrot-cake">
-				<img src="/images/cupcakes.jpg" alt="Carrot Cupcakes"> </a>
-			<a target="_blank" href="https://www.wellplated.com/avocado-brownies/">
-				<img src="/images/brownies.jpg" alt="Avocado Brownies"> </a>
-        </div>
-        <div class="column">
-			<a target="_blank" href="https://www.bettycrocker.com/recipes/pineapple-upside-down-mini-cakes/0461491a-24a1-4175-a71f-ae43ba0b4db4">
-				<img src="/images/pineapple.jpg" alt="Mini Pineapple Upside Down"> </a>
-			<a target="_blank" href="https://www.jocooks.com/recipes/coconut-shrimp-curry/">
-				<img src="/images/coconutshrimp.jpg" alt="Coconut Shrimp Curry"> </a>
-			<a target="_blank" href="https://www.allrecipes.com/recipe/166081/deep-fried-oreos/">
-				<img src="/images/oreos.jpg" alt="Fried Oreos"> </a>
+	</ul>
+	<div id="content">
+		<h2 id="home">About Me</h2>
+		<div class="clearfix">
+			<img class="img1" src="/images/shreya_prof.jpg" alt="Here's a picture of me" width="190" height=auto>
+			<p id="intro"> Hi, I'm Shreya! I'm a current computer science major at Rensselaer Polytechnic Institue
+				in Troy, New York. This summer I'm interning at Google as part of the
+				<a href="https://buildyourfuture.withgoogle.com/programs/step/" target="_blank">STEP</a>
+				program. This portfolio website is one of the first projects I'll
+				be working on this summer. Aside from coding, I enjoy cooking, baking, and listening
+				to music. When I'm not self isolating during quarantine, I also like hanging out with my friends
+				and trying out new places to eat. Hope you enjoy finding a little glimpse into my life
+				through this website :) </p>
+		</div>
 
-        </div>
-        </div>
-        <a target = "_blank" href="https://www.instagram.com/cooking_at_quarantine/" class="fa fa-instagram"> : @cooking_at_quarantine</a>
+		<h2 id="projects"> Projects & Contributions </h2>
+		<h3> Automatcher </h3>
+		<h5> May 2019 - August 2019 </h5>
+		<img src="/images/cplusplus.png" alt="c++ libraries logo" width="150" height="75">
+		<p><i> What is Automatcher?</i></p>
+		<p> As an intern on Google's C++ Libraries team, my podmate and I
+			worked on a tool called
+			<a href="https://docs.google.com/presentation/d/1aE6I6ZWN_BtyMYhmrPpYq-xEJz8Xrka_4Fj0mS_dqOk/edit#slide=id.p"
+				target="_blank">Automatcher</a>
+			. Automatcher is an AST matcher tool which
+			generates clang queries from user-provided code snippets. Usually complex queries
+			need to be written out by hand, but Automatcher automates this process. </p>
+		<i> What I did: </i>
+		<ul>
+			<li> Took ownership of the "hint" based approach to solving the problem of generating
+				an Abstract Syntax Tree (AST) matcher from a user-friendly specification. </li>
+			<li>Implemented support for three different methods of annotating code fragments to guide generation of
+				the AST matcher using C++. </li>
+			<li>Led the design and implementation of the first version of
+				the essential data structure for representing "choice" in a code description.</li>
+		</ul>
+		<hr>
+		<h3> Submitty </h3>
+		<h5> September 2019 - December 2019 </h5>
+		<img src="/images/submitty.png" alt="submitty logo" width="150" height="75">
+		<p><i> What is Submitty? </i>
+			<p>
+				<p> <a href="https://submitty.org/" target="_blank">Submitty</a>
+					is an open source management, assignment submission, exam and
+					grading system from the Rensselaer Center for Open Source Software (RCOS),
+					Department of Computer Science at Rensselaer Polytechnic Institute. </p>
+				<i> What I did: </i>
+				<p>Made open source contributions of fixing bugs and adding new features to the submission
+					server.</p>
+				<hr>
+				<h3> The Geo Effect </h3>
+				<h5> June 2017 - August 2017 </h5>
+				<img src="/images/gwc.png" alt="gwc logo" width="150" height="75">
+				<p><i> What is The Geo Effect? </i></p>
+				<p>The Geo Effect is a climate change awareness website I worked on as part of
+					the <a href="https://girlswhocode.com/" target="_blank">Girls Who Code</a> Summer Immersion Program.
+				</p>
+				<i>What I did:</i>
+				<p> Contributed to the backend of the website in implementing a blog for users to
+					share their views on climate change.</p>
+				<hr>
+				<p> You can check out more of my work on
+					<a href="https://github.com/shreyabarua" target="_blank">GitHub</a>.</p>
 
-      <h2 id = "gallery" > Gallery </h2>    
-        <div class = "slideshow">
-            <div class = "slide-container">
-                <img class = "slide-image" src="/images/family.jpg">
+				<h2 id="cooking"> Cooking </h2>
+				<p>During quarantine I've spent a lot of time in my kitchen cooking and baking.
+					Below are pictures of some of my creations. Click on any picture to be linked
+					to the recipe I followed!
+				</p>
+				<div class="row">
+					<div class="column">
+						<a target="_blank" href="https://www.allrecipes.com/recipe/18465/gnocchi-i/">
+							<img src="/images/gnocchi.jpg" alt="Gnocchi"> </a>
+							<a target="_blank" href="https://downshiftology.com/recipes/falafel/">
+								<img src="/images/falafel.jpg" alt="Falafel"> </a>
+								<a target="_blank" href="https://gimmedelicious.com/easy-avocado-egg-rolls-2/">
+									<img src="/images/avocadorolls.jpg" alt="Avocado Egg Rolls"> </a>
+					</div>
+					<div class="column">
+						<a target="_blank" href="https://www.chelseasmessyapron.com/fruity-pebble-rice-krispie-treats/">
+							<img src="/images/fruitypebble.jpg" alt="Fruity Pebble Rice Krispies"> </a>
+							<a target="_blank" href="https://tasty.co/recipe/carrot-cake">
+								<img src="/images/cupcakes.jpg" alt="Carrot Cupcakes"> </a>
+								<a target="_blank" href="https://www.wellplated.com/avocado-brownies/">
+									<img src="/images/brownies.jpg" alt="Avocado Brownies"> </a>
+					</div>
+					<div class="column">
+						<a target="_blank"
+							href="https://www.bettycrocker.com/recipes/pineapple-upside-down-mini-cakes/0461491a-24a1-4175-a71f-ae43ba0b4db4">
+							<img src="/images/pineapple.jpg" alt="Mini Pineapple Upside Down"> </a>
+							<a target="_blank" href="https://www.jocooks.com/recipes/coconut-shrimp-curry/">
+								<img src="/images/coconutshrimp.jpg" alt="Coconut Shrimp Curry"> </a>
+								<a target="_blank" href="https://www.allrecipes.com/recipe/166081/deep-fried-oreos/">
+									<img src="/images/oreos.jpg" alt="Fried Oreos"> </a>
+
+					</div>
+				</div>
+				<a target="_blank" href="https://www.instagram.com/cooking_at_quarantine/" class="fa fa-instagram"> :
+					@cooking_at_quarantine</a>
+
+				<h2 id="gallery"> Gallery </h2>
+				<div class="slideshow">
+					<div class="slide-container">
+						<img class = "slide-image" src="/images/family.jpg">
             </div>
 
-            <div class = "slide-container">
-                <img class = "slide-image" src="/images/friendsgiving.jpg">
+						<div class="slide-container">
+							<img class = "slide-image" src="/images/friendsgiving.jpg">
             </div>
 
-            <div class = "slide-container">
-                <img class = "slide-image" src="/images/picklesburgh.jpg">
+							<div class="slide-container">
+								<img class = "slide-image" src="/images/picklesburgh.jpg">
             </div>
 
-            <div class = "slide-container">
-                <img class = "slide-image" src="/images/group1.jpg">
-            </div>  
-
-            <div class = "slide-container">
-                <img class = "slide-image" src="/images/group2.jpg">
+								<div class="slide-container">
+									<img class = "slide-image" src="/images/group1.jpg">
             </div>
 
-            <div class = "slide-container">
-                <img class = "slide-image" src="/images/littlepecks.jpg">
+									<div class="slide-container">
+										<img class = "slide-image" src="/images/group2.jpg">
             </div>
 
-            <div class = "slide-container">
-                <img class = "slide-image" src="/images/group3.jpg">
+										<div class="slide-container">
+											<img class = "slide-image" src="/images/littlepecks.jpg">
             </div>
 
-            <div class = "slide-container">
-                <img class = "slide-image" src="/images/canada.jpg">
+											<div class="slide-container">
+												<img class = "slide-image" src="/images/group3.jpg">
             </div>
 
-            <div class = "slide-container">
-                <img class = "slide-image" src="/images/littlepecks2.jpg">
+												<div class="slide-container">
+													<img class = "slide-image" src="/images/canada.jpg">
             </div>
 
-            <a class = "prev" onclick="plusSlides(-1)">❮</a>
-            <a class = "next" onclick="plusSlides(1)">❯</a>
+													<div class="slide-container">
+														<img class = "slide-image" src="/images/littlepecks2.jpg">
+            </div>
 
-        </div>
-       
-      <h2 id = "contact" > Contact </h2>
-        <div class = "clearfix">
-        <a class="fa fa-google"></a>
-        <p>shreyabarua2@gmail.com</p>
-        </div>
+														<a class="prev" onclick="plusSlides(-1)">❮</a>
+														<a class="next" onclick="plusSlides(1)">❯</a>
 
-        <div class = "clearfix">
-        <a class="fa fa-linkedin"></a>
-        <p><a target="_blank" href = "https://www.linkedin.com/in/shreyabarua">linkedin.com/in/shreyabarua</a></p>
-        </div>
-    
-    <h2 id = "comments" > Comments </h2>
-    <div id = "comments-form">
-        <form action="/data" method="POST">
+													</div>
 
-        <p>Leave a comment:</p>
-        <textarea placeholder="Write something..." name="text-input" rows="4" cols="50"></textarea>
-        <br/><br/>
-        <input type="submit" />
+													<h2 id="contact"> Contact </h2>
+													<div class="clearfix">
+														<a class="fa fa-google"></a>
+														<p>shreyabarua2@gmail.com</p>
+													</div>
+
+													<div class="clearfix">
+														<a class="fa fa-linkedin"></a>
+														<p><a target="_blank"
+																href="https://www.linkedin.com/in/shreyabarua">linkedin.com/in/shreyabarua</a>
+														</p>
+													</div>
+
+													<h2 id="comments"> Comments </h2>
+													<div id="comments-form">
+														<form action="/data" method="POST">
+
+															<p>Leave a comment:</p>
+															<textarea placeholder="Write something..." name="text-input" rows="4" cols="50"></textarea>
+															<br/><br/>
+															<input type="submit" />
         </form>
-        
-        <p>Comments:</p>
-        <ul id="msg-container"></ul>
-        <button onclick="deleteComments()">delete comments</button>
-        <p id="logout-link-container"></p>
-    </div>
-    <p id="login-link-container"></p>
 
-    </div>
-    
-    <script>
-    showSlides(slideIndex);
-    </script>
+															<p>Comments:</p>
+															<ul id="msg-container"></ul>
+															<button onclick="deleteComments()">delete comments</button>
+															<p id="logout-link-container"></p>
+													</div>
+													<p id="login-link-container"></p>
 
-  </body>
+												</div>
+
+												<script>
+													showSlides(slideIndex);
+												</script>
+
+</body>
+
 </html>
