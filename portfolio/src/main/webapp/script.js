@@ -81,7 +81,62 @@ function displayComments() {
     });
 }
 
+function createMap() {
+  const map = new google.maps.Map(
+      document.getElementById('map'),
+      {center: {lat: 37.0902, lng: -95.7129}, zoom: 4});
+
+  const gauchoMarker = new google.maps.Marker({
+    position: {lat: 40.4428, lng: -80.0025},
+    map: map,
+    title: 'Gaucho Parrilla Argentina'
+  });
+
+  const pimaanMarker = new google.maps.Marker({
+    position: {lat: 40.9724, lng: -74.0285},
+    map: map,
+    title: 'Pimaan Thai Restaurant'
+  });
+
+  const brendasMarker = new google.maps.Marker({
+    position: {lat: 37.7829, lng: -122.4189},
+    map: map,
+    title: 'Brenda\'s French Soul Food'
+  });
+
+  const halalMarker = new google.maps.Marker({
+    position: {lat: 42.6673, lng: -73.7749},
+    map: map,
+    title: 'Albany Halal Grill'
+  });
+
+  const lobsterMarker = new google.maps.Marker({
+    position: {lat: 44.4401, lng: -68.3708},
+    map: map,
+    title: 'Lunt\'s Gateway Lobster Pound'
+  });
+
+  const cakedupMarker = new google.maps.Marker({
+    position: {lat: 41.1461, lng: -73.9895},
+    map: map,
+    title: 'Caked Up Cafe'
+  });
+
+  const artichokeMarker = new google.maps.Marker({
+    position: {lat: 40.7372, lng: -74.0300},
+    map: map,
+    title: 'Artichoke Basille\'s Pizza'
+  });
+
+  const voodooMarker = new google.maps.Marker({
+    position: {lat: 28.4739, lng: -81.4657},
+    map: map,
+    title: 'Voodoo Doughnut'
+  });
+}
+
 function onLoad() {
     getMessages();
     displayComments();
+    createMap();
 }

@@ -226,3 +226,9 @@ img {
 #comments-form {
     display: none;
 }
+
+#map {
+  border: thin solid black;
+  height: 400px;
+  width: 650px;
+}
