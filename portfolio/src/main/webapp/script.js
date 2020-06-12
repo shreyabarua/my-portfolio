@@ -91,42 +91,58 @@ function addLandmark(map, lat, lng, title, description) {
   });
 }
 
+function createInfoWindowContent(name, location, description, url, img) {
+    return '<h2>'+name+'</h2>' + '<h3>'+location+'</h3>' 
+    + '<div class = "clearfix"><img class= "img1" src='+ img +
+    ' width="100" height=auto>' + '<p>'+description+'\nWebsite: <a href =\"' +
+    url+ '\" target = "_blank">'+ url+'</a></p></div>' ;
+}
 function createMap() {
   const map = new google.maps.Map(
       document.getElementById('map'),
       {center: {lat: 37.0902, lng: -95.7129}, zoom: 4});
-
+  /*
+    var gauchoContent = '<h2>Gaucho Parrilla Argentina</h2>' + '<h3>Pittsburgh, PA</h3>' 
+    + '<p>During my time at Pittsburgh last summer I ate at a lot of awesome restaurants but this Argentinian steakhouse was ' +
+    'definitely one to remember. The line to be seated was going out the door but it was well worth the wait.' +
+    'The Carne Asado sandwich I ordered was delicious but the giant paella my friends and I shared was ' + 
+    'definitely the star of the show. </p>' + '<p>Website: <a href = "https://www.eat-gaucho.com/" target = "_blank">'+
+    'https://www.eat-gaucho.com/</a></p>';
+*/
   addLandmark(
-      map, 40.4428, -80.0025, 'Gaucho Parrilla Argentina',
-      'info about gaucho')
+      map, 40.4428, -80.0025, 'Gaucho Parrilla Argentina', 
+      createInfoWindowContent('Gaucho Parrilla Argentina', 'Pittsburgh, PA', 'During my time at Pittsburgh last summer ' +
+    'I ate at a lot of awesome restaurants but this Argentinian steakhouse was definitely one to remember. The line ' +
+    'to be seated was going out the door but it was well worth the wait. The Carne Asado sandwich I ordered was delicious ' + 
+    'but the giant paella my friends and I shared was definitely the star of the show. ', 'https://www.eat-gaucho.com/','/images/submitty.png'));
 
   addLandmark(
       map, 40.9724, -74.0285, 'Pimaan Thai Restaurant',
-      'info about pimaan')
+      'info about pimaan');
 
   addLandmark(
       map, 37.7829, -122.4189, 'Brenda\'s French Soul Food',
-      'info about brendas')
+      'info about brendas');
 
   addLandmark(
       map, 42.6673, -73.7749, 'Albany Halal Grill',
-      'info about halal grill')
+      'info about halal grill');
 
   addLandmark(
       map, 44.4401, -68.3708, 'Lunt\'s Gateway Lobster Pound',
-      'info about lunts lobster')
+      'info about lunts lobster');
 
   addLandmark(
       map, 41.1461, -73.9895, 'Caked Up',
-      'info about caked up')
+      'info about caked up');
 
   addLandmark(
       map, 40.7441, -74.0066, 'Artichoke Basille\'s Pizza',
-      'Some info about artichoke basille\'s.')
+      'Some info about artichoke basille\'s.');
 
   addLandmark(
       map, 28.4739, -81.4657, 'Voodoo Doughnut',
-      'Some info about voodoo.')
+      'Some info about voodoo.');
 
 }
 
