@@ -81,58 +81,53 @@ function displayComments() {
     });
 }
 
+function addLandmark(map, lat, lng, title, description) {
+  const marker = new google.maps.Marker(
+      {position: {lat: lat, lng: lng}, map: map, title: title});
+
+  const infoWindow = new google.maps.InfoWindow({content: description});
+  marker.addListener('click', () => {
+    infoWindow.open(map, marker);
+  });
+}
+
 function createMap() {
   const map = new google.maps.Map(
       document.getElementById('map'),
       {center: {lat: 37.0902, lng: -95.7129}, zoom: 4});
 
-  const gauchoMarker = new google.maps.Marker({
-    position: {lat: 40.4428, lng: -80.0025},
-    map: map,
-    title: 'Gaucho Parrilla Argentina'
-  });
+  addLandmark(
+      map, 40.4428, -80.0025, 'Gaucho Parrilla Argentina',
+      'info about gaucho')
 
-  const pimaanMarker = new google.maps.Marker({
-    position: {lat: 40.9724, lng: -74.0285},
-    map: map,
-    title: 'Pimaan Thai Restaurant'
-  });
+  addLandmark(
+      map, 40.9724, -74.0285, 'Pimaan Thai Restaurant',
+      'info about pimaan')
 
-  const brendasMarker = new google.maps.Marker({
-    position: {lat: 37.7829, lng: -122.4189},
-    map: map,
-    title: 'Brenda\'s French Soul Food'
-  });
+  addLandmark(
+      map, 37.7829, -122.4189, 'Brenda\'s French Soul Food',
+      'info about brendas')
 
-  const halalMarker = new google.maps.Marker({
-    position: {lat: 42.6673, lng: -73.7749},
-    map: map,
-    title: 'Albany Halal Grill'
-  });
+  addLandmark(
+      map, 42.6673, -73.7749, 'Albany Halal Grill',
+      'info about halal grill')
 
-  const lobsterMarker = new google.maps.Marker({
-    position: {lat: 44.4401, lng: -68.3708},
-    map: map,
-    title: 'Lunt\'s Gateway Lobster Pound'
-  });
+  addLandmark(
+      map, 44.4401, -68.3708, 'Lunt\'s Gateway Lobster Pound',
+      'info about lunts lobster')
 
-  const cakedupMarker = new google.maps.Marker({
-    position: {lat: 41.1461, lng: -73.9895},
-    map: map,
-    title: 'Caked Up Cafe'
-  });
+  addLandmark(
+      map, 41.1461, -73.9895, 'Caked Up',
+      'info about caked up')
 
-  const artichokeMarker = new google.maps.Marker({
-    position: {lat: 40.7372, lng: -74.0300},
-    map: map,
-    title: 'Artichoke Basille\'s Pizza'
-  });
+  addLandmark(
+      map, 40.7441, -74.0066, 'Artichoke Basille\'s Pizza',
+      'Some info about artichoke basille\'s.')
 
-  const voodooMarker = new google.maps.Marker({
-    position: {lat: 28.4739, lng: -81.4657},
-    map: map,
-    title: 'Voodoo Doughnut'
-  });
+  addLandmark(
+      map, 28.4739, -81.4657, 'Voodoo Doughnut',
+      'Some info about voodoo.')
+
 }
 
 function onLoad() {
