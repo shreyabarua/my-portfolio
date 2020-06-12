@@ -94,21 +94,14 @@ function addLandmark(map, lat, lng, title, description) {
 function createInfoWindowContent(name, location, description, url, img) {
     return '<h2>'+name+'</h2>' + '<h3>'+location+'</h3>' 
     + '<div class = "clearfix"><img class= "img1" src='+ img +
-    ' width="100" height=auto>' + '<p>'+description+'\nWebsite: <a href =\"' +
+    ' width="150" height=auto>' + '<p>'+description+'\nWebsite: <a href =\"' +
     url+ '\" target = "_blank">'+ url+'</a></p></div>' ;
 }
 function createMap() {
   const map = new google.maps.Map(
       document.getElementById('map'),
       {center: {lat: 37.0902, lng: -95.7129}, zoom: 4});
-  /*
-    var gauchoContent = '<h2>Gaucho Parrilla Argentina</h2>' + '<h3>Pittsburgh, PA</h3>' 
-    + '<p>During my time at Pittsburgh last summer I ate at a lot of awesome restaurants but this Argentinian steakhouse was ' +
-    'definitely one to remember. The line to be seated was going out the door but it was well worth the wait.' +
-    'The Carne Asado sandwich I ordered was delicious but the giant paella my friends and I shared was ' + 
-    'definitely the star of the show. </p>' + '<p>Website: <a href = "https://www.eat-gaucho.com/" target = "_blank">'+
-    'https://www.eat-gaucho.com/</a></p>';
-*/
+
   addLandmark(
       map, 40.4428, -80.0025, 'Gaucho Parrilla Argentina', 
       createInfoWindowContent('Gaucho Parrilla Argentina', 'Pittsburgh, PA', 'During my time at Pittsburgh last summer ' +
@@ -148,11 +141,21 @@ function createMap() {
 
   addLandmark(
       map, 44.4401, -68.3708, 'Lunt\'s Gateway Lobster Pound',
-      'info about lunts lobster');
+      createInfoWindowContent('Lunt\'s Gateway Lobster Pound','Trenton, ME',
+      'When my family friends and I road tripped to Canada last summer, we could not pass ' +
+      'through Maine without stopping for the state\'s famous delicacy: lobster. Knowing ' +
+      'I probably couldn\'t handle the task of eating a whole lobster, I tried the Lobster Roll, ' +
+      'pictured to the right, instead. Equally easy to eat and delicious!','https://www.luntsgatewaylobster.com/menu.htm',
+      '/images/lobster.jpg'));
 
   addLandmark(
       map, 41.1461, -73.9895, 'Caked Up',
-      'info about caked up');
+        createInfoWindowContent('Caked Up','New City, NY','This is one of my favorite dessert' +
+        'spots right by my house. Caked Up is well known for its custom designer cakes, having made ' +
+        'cakes for celebrities like Scott Disick, Kevin Durant, Odell Beckham Jr., A-Rod, and ' +
+        'Rihanna. They have crazy cupcake flavors which I have never tried, like Maple Bacon and Chicken '+
+        'and Waffle, but their normal flavors are delicious as well!','https://cakedupcafe.com/',
+        '/images/cakedup.jpg'));
 
   addLandmark(
       map, 40.7441, -74.0066, 'Artichoke Basille\'s Pizza',
@@ -163,7 +166,7 @@ function createMap() {
       'it out. My friends and I each tried a slice of Margherita, Vodka, and of course'+
       'Artichoke. All the slices were delicious but my personal favorite was the Vodka slice. ' +
       'Luckily, this restaurant has multiple locations so people from all over the country can enjoy.',
-      'https://www.artichokepizza.com/','/images/oreos.jpg'));
+      'https://www.artichokepizza.com/','/images/pizza.jpg'));
 
   addLandmark(
       map, 28.4739, -81.4657, 'Voodoo Doughnut',
