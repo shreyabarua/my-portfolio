@@ -94,7 +94,7 @@ function addLandmark(map, lat, lng, title, description) {
 function createInfoWindowContent(name, location, description, url, img) {
     return '<h2>'+name+'</h2>' + '<h3>'+location+'</h3>' 
     + '<div class = "clearfix"><img class= "img1" src='+ img +
-    ' width="150" height=auto>' + '<p>'+description+'\nWebsite: <a href =\"' +
+    ' width="150" height=auto>' + '<p>'+description+' <a href =\"' +
     url+ '\" target = "_blank">'+ url+'</a></p></div>' ;
 }
 function createMap() {
@@ -169,8 +169,11 @@ function createMap() {
       'https://www.artichokepizza.com/','/images/pizza.jpg'));
 
   addLandmark(
-      map, 28.4739, -81.4657, 'Voodoo Doughnut',
-      'Some info about voodoo.');
+      map, 30.3322, -81.6557, 'Krispy Kreme',
+      createInfoWindowContent('Krispy Kreme','Jacksonville, FL', 'My first time having Krispy ' +
+      'Kreme was on the way back home from Universal Studios. Although I never go for glazed donuts ' +
+      'because I think they\'re boring, having a hot glazed donut from here changed the game completely. '+
+      'Dunkin Donuts could never.','https://www.krispykreme.com/','/images/krispykreme.jpg'));
 
 }
 
