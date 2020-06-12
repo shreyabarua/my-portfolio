@@ -114,19 +114,37 @@ function createMap() {
       createInfoWindowContent('Gaucho Parrilla Argentina', 'Pittsburgh, PA', 'During my time at Pittsburgh last summer ' +
     'I ate at a lot of awesome restaurants but this Argentinian steakhouse was definitely one to remember. The line ' +
     'to be seated was going out the door but it was well worth the wait. The Carne Asado sandwich I ordered was delicious ' + 
-    'but the giant paella my friends and I shared was definitely the star of the show. ', 'https://www.eat-gaucho.com/','/images/submitty.png'));
+    'but the giant paella my friends and I shared was definitely the star of the show. ', 'https://www.eat-gaucho.com/',
+    '/images/submitty.png'));
 
   addLandmark(
       map, 40.9724, -74.0285, 'Pimaan Thai Restaurant',
-      'info about pimaan');
+      createInfoWindowContent('Pimaan Thai Restaurant','Emerson, NJ', 'Thai food is one of my ' +
+      'favorite cuisines and my favorite Thai restaurant has to be Pimaan. My go to is always ' +
+      'either the Red Curry or Pad Thai. One of my favorite things about Pimaan however is the ' +
+      'fried ice cream for dessert. The server brings out the dish and basically pours fire ' +
+      'on it as you can see in the picture to the right. It\'super cool!','http://www.pimaanthai.com/',
+      '/images/submitty.png'));
 
   addLandmark(
       map, 37.7829, -122.4189, 'Brenda\'s French Soul Food',
-      'info about brendas');
+      createInfoWindowContent('Brenda\'s French Soul Food','San Francisco, CA',
+      'The only time I\'ve been to California was for Google\'s GWE summit '+ 
+      'and even though it was only for a few days, it was definitely one of my favorite trips of all ' +
+      'time. After a long day of sight seeing in San Francisco, my friends and I decided to stop at ' +
+      'Brenda\'s French Soul Food for dinner. Maybe it was because we were starving but this place had some ' +
+      'of the greatest food. I had the Spicy Jambalaya and my friends got the fried chicken and mac & cheese. ' +
+      'For dessert we were able to choose a sampler of three different flavors of beignets. If I\'m '+
+      'ever back in SF, this is the first place I\'m going!','https://frenchsoulfood.com/',
+      '/images/submitty.png'));
 
   addLandmark(
       map, 42.6673, -73.7749, 'Albany Halal Grill',
-      'info about halal grill');
+      createInfoWindowContent('Halal Grill','Albany, NY','In college, Halal Grill is the place ' +
+      'my friends and I go for late night dinners. Although it\'s a bit far from our school ' +
+      'and in a sketchy neighborhood, the food is yummy, cheap, and well worth the drive and ' +
+      'crackheads.','https://www.yelp.com/biz/albany-halal-grill-albany',
+      '/images/submitty.png'));
 
   addLandmark(
       map, 44.4401, -68.3708, 'Lunt\'s Gateway Lobster Pound',
