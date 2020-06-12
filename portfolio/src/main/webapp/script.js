@@ -115,7 +115,7 @@ function createMap() {
     'I ate at a lot of awesome restaurants but this Argentinian steakhouse was definitely one to remember. The line ' +
     'to be seated was going out the door but it was well worth the wait. The Carne Asado sandwich I ordered was delicious ' + 
     'but the giant paella my friends and I shared was definitely the star of the show. ', 'https://www.eat-gaucho.com/',
-    '/images/submitty.png'));
+    '/images/gaucho.jpg'));
 
   addLandmark(
       map, 40.9724, -74.0285, 'Pimaan Thai Restaurant',
@@ -124,7 +124,7 @@ function createMap() {
       'either the Red Curry or Pad Thai. One of my favorite things about Pimaan however is the ' +
       'fried ice cream for dessert. The server brings out the dish and basically pours fire ' +
       'on it as you can see in the picture to the right. It\'super cool!','http://www.pimaanthai.com/',
-      '/images/submitty.png'));
+      '/images/pimaan.jpg'));
 
   addLandmark(
       map, 37.7829, -122.4189, 'Brenda\'s French Soul Food',
@@ -136,7 +136,7 @@ function createMap() {
       'of the greatest food. I had the Spicy Jambalaya and my friends got the fried chicken and mac & cheese. ' +
       'For dessert we were able to choose a sampler of three different flavors of beignets. If I\'m '+
       'ever back in SF, this is the first place I\'m going!','https://frenchsoulfood.com/',
-      '/images/submitty.png'));
+      '/images/brendas.jpg'));
 
   addLandmark(
       map, 42.6673, -73.7749, 'Albany Halal Grill',
@@ -144,7 +144,7 @@ function createMap() {
       'my friends and I go for late night dinners. Although it\'s a bit far from our school ' +
       'and in a sketchy neighborhood, the food is yummy, cheap, and well worth the drive and ' +
       'crackheads.','https://www.yelp.com/biz/albany-halal-grill-albany',
-      '/images/submitty.png'));
+      '/images/halalgrill.jpg'));
 
   addLandmark(
       map, 44.4401, -68.3708, 'Lunt\'s Gateway Lobster Pound',
@@ -156,7 +156,14 @@ function createMap() {
 
   addLandmark(
       map, 40.7441, -74.0066, 'Artichoke Basille\'s Pizza',
-      'Some info about artichoke basille\'s.');
+      createInfoWindowContent('Artichoke Basille\'s Pizza','New York, NY', 'There\'s no ' +
+      'better pizza than New York pizza and Artichoke Basille\'s was the ' +
+      'the perfect place to eat after a long walk on the High Line. Usually I never '+
+      'go for fancy pizza but since I was in the city for orientation I decided to try ' +
+      'it out. My friends and I each tried a slice of Margherita, Vodka, and of course'+
+      'Artichoke. All the slices were delicious but my personal favorite was the Vodka slice. ' +
+      'Luckily, this restaurant has multiple locations so people from all over the country can enjoy.',
+      'https://www.artichokepizza.com/','/images/oreos.jpg'));
 
   addLandmark(
       map, 28.4739, -81.4657, 'Voodoo Doughnut',
