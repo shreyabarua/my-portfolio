@@ -116,7 +116,7 @@ function createMap() {
       'favorite cuisines and my favorite Thai restaurant has to be Pimaan. My go to is always ' +
       'either the Red Curry or Pad Thai. One of my favorite things about Pimaan however is the ' +
       'fried ice cream for dessert. The server brings out the dish and basically pours fire ' +
-      'on it as you can see in the picture to the right. It\'s pretty cool!','http://www.pimaanthai.com/',
+      'on it as you can see in the picture to the right. Pretty cool!','http://www.pimaanthai.com/',
       '/images/pimaan.jpg'));
 
   addLandmark(
@@ -149,7 +149,7 @@ function createMap() {
 
   addLandmark(
       map, 41.1461, -73.9895, 'Caked Up',
-        createInfoWindowContent('Caked Up','New City, NY','This is one of my favorite dessert' +
+        createInfoWindowContent('Caked Up','New City, NY','This is one of my favorite dessert ' +
         'spots right by my house. Caked Up is well known for its custom designer cakes, having made ' +
         'cakes for celebrities like Scott Disick, Kevin Durant, Odell Beckham Jr., A-Rod, and ' +
         'Rihanna. They have crazy cupcake flavors which I have never tried, like Maple Bacon and Chicken '+
