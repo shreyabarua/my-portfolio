@@ -105,7 +105,7 @@ function createMap() {
   addLandmark(
       map, 40.4428, -80.0025, 'Gaucho Parrilla Argentina', 
       createInfoWindowContent('Gaucho Parrilla Argentina', 'Pittsburgh, PA', 'During my time at Pittsburgh last summer ' +
-    'I ate at a lot of awesome restaurants but this Argentinian steakhouse was definitely one to remember. The line ' +
+    'I ate at a lot of awesome restaurants, but this Argentinian steakhouse was definitely one to remember. The line ' +
     'to be seated was going out the door but it was well worth the wait. The Carne Asado sandwich I ordered was delicious ' + 
     'but the giant paella my friends and I shared was definitely the star of the show. ', 'https://www.eat-gaucho.com/',
     '/images/gaucho.jpg'));
@@ -116,7 +116,7 @@ function createMap() {
       'favorite cuisines and my favorite Thai restaurant has to be Pimaan. My go to is always ' +
       'either the Red Curry or Pad Thai. One of my favorite things about Pimaan however is the ' +
       'fried ice cream for dessert. The server brings out the dish and basically pours fire ' +
-      'on it as you can see in the picture to the right. It\'super cool!','http://www.pimaanthai.com/',
+      'on it as you can see in the picture to the right. It\'s pretty cool!','http://www.pimaanthai.com/',
       '/images/pimaan.jpg'));
 
   addLandmark(
@@ -125,8 +125,8 @@ function createMap() {
       'The only time I\'ve been to California was for Google\'s GWE summit '+ 
       'and even though it was only for a few days, it was definitely one of my favorite trips of all ' +
       'time. After a long day of sight seeing in San Francisco, my friends and I decided to stop at ' +
-      'Brenda\'s French Soul Food for dinner. Maybe it was because we were starving but this place had some ' +
-      'of the greatest food. I had the Spicy Jambalaya and my friends got the fried chicken and mac & cheese. ' +
+      'Brenda\'s French Soul Food for dinner. Maybe it was because we were starving but this place had ' +
+      'the greatest food. I ordered the Spicy Jambalaya and my friends got the fried chicken and mac & cheese. ' +
       'For dessert we were able to choose a sampler of three different flavors of beignets. If I\'m '+
       'ever back in SF, this is the first place I\'m going!','https://frenchsoulfood.com/',
       '/images/brendas.jpg'));
@@ -135,8 +135,7 @@ function createMap() {
       map, 42.6673, -73.7749, 'Albany Halal Grill',
       createInfoWindowContent('Halal Grill','Albany, NY','In college, Halal Grill is the place ' +
       'my friends and I go for late night dinners. Although it\'s a bit far from our school ' +
-      'and in a sketchy neighborhood, the food is yummy, cheap, and well worth the drive and ' +
-      'crackheads.','https://www.yelp.com/biz/albany-halal-grill-albany',
+      'and in a sketchy neighborhood, the food is yummy, cheap, and well worth the drive.','https://www.yelp.com/biz/albany-halal-grill-albany',
       '/images/halalgrill.jpg'));
 
   addLandmark(
@@ -160,11 +159,11 @@ function createMap() {
   addLandmark(
       map, 40.7441, -74.0066, 'Artichoke Basille\'s Pizza',
       createInfoWindowContent('Artichoke Basille\'s Pizza','New York, NY', 'There\'s no ' +
-      'better pizza than New York pizza and Artichoke Basille\'s was the ' +
+      'better pizza than New York pizza and Artichoke Basille\'s is the ' +
       'the perfect place to eat after a long walk on the High Line. Usually I never '+
-      'go for fancy pizza but since I was in the city for orientation I decided to try ' +
-      'it out. My friends and I each tried a slice of Margherita, Vodka, and of course'+
-      'Artichoke. All the slices were delicious but my personal favorite was the Vodka slice. ' +
+      'go for fancy pizza but since I was in the city for orientation, I decided to try ' +
+      'it out. My friends and I each tried a slice of Margherita, Vodka, and of course, '+
+      'Artichoke. All of them were delicious but my personal favorite was the Vodka slice. ' +
       'Luckily, this restaurant has multiple locations so people from all over the country can enjoy.',
       'https://www.artichokepizza.com/','/images/pizza.jpg'));
 

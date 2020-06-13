@@ -46,6 +46,13 @@
   color: #2d2075;
 }
 
+#travel {
+  padding-top: 60px;
+  font-family: serif;
+  text-align: center;
+  color: #2d2075;
+}
+
 #gallery {
   padding-top: 60px;
   font-family: serif;
@@ -229,6 +236,6 @@ img {
 
 #map {
   border: thin solid black;
-  height: 400px;
-  width: 650px;
+  height: 450px;
+  width: 700px;
 }
