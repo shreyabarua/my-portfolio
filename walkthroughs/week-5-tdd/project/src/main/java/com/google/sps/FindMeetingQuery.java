@@ -21,11 +21,12 @@ import java.util.*;
 
 public final class FindMeetingQuery {
   public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
-    ArrayList<TimeRange> available_times = new ArrayList<TimeRange>();
-    if (request.getDuration() > TimeRange.WHOLE_DAY.duration()) { // not possible for duration to exceed whole day
-        return available_times;
+    ArrayList<TimeRange> availableTimes = new ArrayList<TimeRange>();
+    if (request.getDuration() > TimeRange.WHOLE_DAY.duration()) { 
+        // not possible for duration to exceed whole day
+        return availableTimes; 
     }
-    ArrayList<TimeRange> blocked_times = new ArrayList<TimeRange>();
+    ArrayList<TimeRange> blockedTimes = new ArrayList<TimeRange>();
     Set<String> r_attendees = new HashSet<String>(request.getAttendees());      
     for (Event e : events) { // check each event of the day for blocked times
         Set<String> e_attendees = new HashSet<String>(e.getAttendees());
@@ -35,31 +36,33 @@ public final class FindMeetingQuery {
             continue; // none of our attendees will be at this event
         }
         else {
-            blocked_times.add(e.getWhen()); // at least one of our attendees will be at this event so we cannot do this time
+            // at least one of our attendees will be at this event
+            blockedTimes.add(e.getWhen()); 
         }
     }
-    Collections.sort(blocked_times, TimeRange.ORDER_BY_START);
+    Collections.sort(blockedTimes, TimeRange.ORDER_BY_START);
     
-    // remove any nested events
-    for (int count = 0; count < blocked_times.size()-1; count++) {
-        if ((blocked_times.get(count)).contains(blocked_times.get(count+1))) {
-            blocked_times.remove(count+1);
+    // remove any nested events where the shorter event overrides the longer event
+    for (int count = 0; count < blockedTimes.size()-1; count++) {
+        if ((blockedTimes.get(count)).contains(blockedTimes.get(count+1))) {
+            blockedTimes.remove(count+1);
             count--;
         }
     }
+
     // go through blocked times and find open times surrounding it
-    int start = 0;
-    for (TimeRange t : blocked_times) {
+    int start = TimeRange.START_OF_DAY;
+    for (TimeRange t : blockedTimes) {
         int end = t.start(); 
-        TimeRange good =  TimeRange.fromStartEnd(start, end,false);
-        if (good.duration() >= request.getDuration()) available_times.add(good); //only add if there's enough time for the meeting
+        TimeRange good =  TimeRange.fromStartEnd(start, end, false);
+        if (good.duration() >= request.getDuration()) availableTimes.add(good);
         start = end + t.duration(); //must resume after the event ends
 
     }
     // for the rest of the day:
-    TimeRange eod =  TimeRange.fromStartEnd(start, 1440,false);
-    if (eod.duration() >= request.getDuration()) available_times.add(eod);
-    return available_times;
+    TimeRange eod =  TimeRange.fromStartEnd(start, TimeRange.END_OF_DAY, true);
+    if (eod.duration() >= request.getDuration()) availableTimes.add(eod);
+    return availableTimes;
 
   }
 }
