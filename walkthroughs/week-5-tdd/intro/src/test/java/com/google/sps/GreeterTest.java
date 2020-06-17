@@ -24,20 +24,20 @@ public final class GreeterTest {
 
   @Test
   public void testGreeting() {
-        Greeter greeter = new Greeter();
+    Greeter greeter = new Greeter();
 
-        String greeting = greeter.greet("Ada");
+    String greeting = greeter.greet("Ada");
 
-        Assert.assertEquals("Hello Ada", greeting);
+    Assert.assertEquals("Hello Ada", greeting);
   }
 
-    @Test
-    public void testGreetingTrimsWhitespace() {
-        Greeter greeter = new Greeter();
+  @Test
+  public void testGreetingTrimsWhitespace() {
+    Greeter greeter = new Greeter();
 
-        String greeting = greeter.greet("   Ada   ");
+    String greeting = greeter.greet("   Ada   ");
 
-        // Whitespace should be trimmed
-        Assert.assertEquals("Hello Ada", greeting);
-    }
+    // Whitespace should be trimmed
+    Assert.assertEquals("Hello Ada", greeting);
+  }
 }
