@@ -25,11 +25,11 @@ public final class FindMeetingQuery {
   public ArrayList<TimeRange> getAvailableTimes(Collection<Event> events, Collection<String> attendees, long duration) {
     ArrayList<TimeRange> availableTimes = new ArrayList<TimeRange>();
     ArrayList<TimeRange> blockedTimes = new ArrayList<TimeRange>();
-    //Set<String> r_attendees = new HashSet<String>(request.getAttendees());      
+        
     for (Event e : events) { // check each event of the day for blocked times
-      Set<String> e_attendees = new HashSet<String>(e.getAttendees());
+      Set<String> eAttendees = new HashSet<String>(e.getAttendees());
       Set<String> intersection = new HashSet<String>(attendees);
-      intersection.retainAll(e_attendees);
+      intersection.retainAll(eAttendees);
       if (intersection.isEmpty()) { 
         continue; // none of our attendees will be at this event
       }
