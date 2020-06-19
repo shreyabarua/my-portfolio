@@ -21,18 +21,15 @@ import java.util.HashSet;
 import java.util.ArrayList;
 
 public final class FindMeetingQuery {
-  public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
+
+  public ArrayList<TimeRange> getAvailableTimes(Collection<Event> events, Collection<String> attendees, long duration) {
     ArrayList<TimeRange> availableTimes = new ArrayList<TimeRange>();
-    if (request.getDuration() > TimeRange.WHOLE_DAY.duration()) {
-      // not possible for duration to exceed whole day
-      return availableTimes; 
-    }
     ArrayList<TimeRange> blockedTimes = new ArrayList<TimeRange>();
-    Set<String> r_attendees = new HashSet<String>(request.getAttendees());      
+        
     for (Event e : events) { // check each event of the day for blocked times
-      Set<String> e_attendees = new HashSet<String>(e.getAttendees());
-      Set<String> intersection = new HashSet<String>(r_attendees);
-      intersection.retainAll(e_attendees);
+      Set<String> eAttendees = new HashSet<String>(e.getAttendees());
+      Set<String> intersection = new HashSet<String>(attendees);
+      intersection.retainAll(eAttendees);
       if (intersection.isEmpty()) { 
         continue; // none of our attendees will be at this event
       }
@@ -57,14 +54,53 @@ public final class FindMeetingQuery {
     for (TimeRange t : blockedTimes) {
       int end = t.start(); 
       TimeRange good =  TimeRange.fromStartEnd(start, end, false);
-      if (good.duration() >= request.getDuration()) availableTimes.add(good);
+      if (good.duration() >= duration) availableTimes.add(good);
       start = end + t.duration(); //must resume after the event ends
     }
 
     // for the rest of the day:
     TimeRange eod =  TimeRange.fromStartEnd(start, TimeRange.END_OF_DAY, true);
-    if (eod.duration() >= request.getDuration()) availableTimes.add(eod);
+    if (eod.duration() >= duration) availableTimes.add(eod);
+    
     return availableTimes;
+  }
 
+  public Collection<TimeRange> query(Collection<Event> events, MeetingRequest request) {
+    ArrayList<TimeRange> availableTimesMandatory = new ArrayList<TimeRange>();
+    ArrayList<TimeRange> availableTimesOptional = new ArrayList<TimeRange>();
+    if (request.getDuration() > TimeRange.WHOLE_DAY.duration()) {
+      // not possible for duration to exceed whole day
+      return availableTimesMandatory; 
+    }
+
+    Collection<String> mandatoryAttendees = request.getAttendees();
+    Collection<String> optionalAttendees = request.getOptionalAttendees();
+    availableTimesMandatory = getAvailableTimes(events, mandatoryAttendees, request.getDuration());
+    availableTimesOptional = getAvailableTimes(events, optionalAttendees, request.getDuration());
+
+    if (optionalAttendees.isEmpty()) {
+      return availableTimesMandatory;
+    }
+    else if (mandatoryAttendees.isEmpty()) {
+      return availableTimesOptional;
+    }
+    else {
+      ArrayList<TimeRange> availableTimesEveryone = new ArrayList<TimeRange>();
+
+      for (TimeRange optional : availableTimesOptional) {
+        for (TimeRange mandatory : availableTimesMandatory) {
+          if (optional.start() <= mandatory.end()) {
+            int biggerStart = Math.max(optional.start(), mandatory.start());
+            int smallerEnd = Math.min(optional.end(), mandatory.end());
+            // get the smallest possible time range from the two available time slots
+            TimeRange range =  TimeRange.fromStartEnd(biggerStart, smallerEnd, false);
+            if (range.duration() >= request.getDuration()) availableTimesEveryone.add(range);
+          }
+        }
+      }
+
+      if (availableTimesEveryone.isEmpty()) return availableTimesMandatory;
+      return availableTimesEveryone;        
+    }
   }
 }
